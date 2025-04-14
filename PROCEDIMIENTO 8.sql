@@ -1,0 +1,8 @@
+DELIMITER $$
+
+CREATE FUNCTION calcularEdad(fecha_nacimiento DATE) RETURNS INT
+BEGIN
+    RETURN TIMESTAMPDIFF(YEAR, fecha_nacimiento, CURDATE());
+END $$
+
+DELIMITER ;
